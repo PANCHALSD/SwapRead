@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: #ff9ea3;
+      font-family: Arial,sans-serif;
+    }
+
+    h1 {
+            color: #4a4a4a;
+            font-weight: bold;
+        }
+
+        .Questions {
+            text-align: left;
+            margin: 20px ;
+            padding-top: 20px;
+        }
+
+        .faq-item {
+      background: linear-gradient(to right, #ffb6b9, #fae3d9);
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      display: none; /* Initially hidden */
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      margin-top: 5px;
+    } 
+
+    
+  </style>
+</head>
+
+
+<body>
+  <h1>Frequently asked questions</h1>
+  <h3 style="color: rgb(78, 16, 44);">General</h3>
+   
+
+    
+    <div class="Questions">
+      <div class="faq-item" onclick="toggleAnswer('answer1')">
+        How does SwapReads work?
+      </div>
+
+      <div class="faq-answer" id="answer1">
+        SwapReads is a global book exchange platform where users can create profiles, list the books they're willing to swap, and find other users' collections. When you find a book you're interested in, you can find suitable offers and read that book. It's that easy!
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer('answer2')">
+        How does SwapReads contribute to sustainability?
+      </div>
+      <div class="faq-answer" id="answer2">
+        By promoting book reuse, SwapReads reduces waste and encourages a circular economy where books find new owners instead of being discarded.
+      </div>
+  
+      <div class="faq-item" onclick="toggleAnswer('answer3')">
+        How do I join the SwapReads community?
+      </div>
+      <div class="faq-answer" id="answer3">
+        You can join SwapReads by signing up on our website, creating a profile, and listing books you are willing to exchange.
+      </div>
+  
+      <div class="faq-item" onclick="toggleAnswer('answer4')">
+        How do I ensure the safety and security of my personal information on SwapReads?
+      </div>
+      <div class="faq-answer" id="answer4">
+        SwapReads uses encryption and privacy protection measures to keep your personal data secure. You should also follow best practices like using strong passwords.
+      </div>
+    </div>
+   
+    <script>
+      function toggleAnswer(answerId) {
+        let answer = document.getElementById(answerId);
+        if (answer.style.display === "none" || answer.style.display === "") {
+          answer.style.display = "block";
+        } else {
+          answer.style.display = "none";
+        }
+      }
+    </script>
+</body>
+
+</html>
